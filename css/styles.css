@@ -1,0 +1,49 @@
+body {
+    background-color: lightgray;
+}
+
+.cell {
+    height: var(--colWidth);
+    width: var(--colWidth);
+    background-color: white;
+    margin: auto;
+}
+
+.cell.colored {
+    background-color: slategray;
+}
+
+.buttons {
+    cursor: pointer;
+    border: 0px;
+    height: 100px;
+    width: 200px;
+    margin: 30px;
+}
+
+#interactive {
+    display: flex;
+    flex-direction: row;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-container {
+    margin: auto;
+    border: 1px solid red;
+    height: 800px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(var(--colNum), auto);
+    grid-template-rows: repeat(var(--colNum), auto);
+    grid-row: auto;
+}
+
+:root {
+    --colNum: 16;
+    --colWidth: 28px;
+    --cellColor: darkgray;
+}
